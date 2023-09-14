@@ -12,7 +12,7 @@
       <li><a href="./kontak.html">Kontak</a></li>
     </ul>
     <h1>Formulir Registrasi Data Mahasiswa</h1>
-    <form onsubmit="return ValidateForm()">
+    <form action="" method="post" onsubmit="return ValidateForm()">
       <table cellspacing="4" cellpadding="4">
         <tr>
           <td><strong>Nama Mahasiswa</strong></td>
@@ -31,6 +31,7 @@
           <td><strong>Program Studi</strong></td>
           <td>
             <select id="prodi" name="prodi">
+              <option value="" selected disabled>Pilih Program Studi</option>
               <option value="Teknik Informatika">Teknik Informatika</option>
               <option value="Teknik Industri">Teknik Industri</option>
               <option value="Sistem Informasi">Sistem Informasi</option>
@@ -65,7 +66,7 @@
               <input id="pubgMobile" type="checkbox" name="game" value="PUBG Mobile" />
               <label for="pubgMobile">PUBG Mobile</label>
               <input id="mobileLegends" type="checkbox" name="game" value="Mobile Legends" />
-              <label for="mobileLegends">Mobile Legend</label>
+              <label for="mobileLegends">Mobile Legends</label>
             </fieldset>
             <fieldset>
               <legend><strong>Film</strong></legend>

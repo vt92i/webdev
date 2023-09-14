@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>210711385 - Benidiktus Violaz Morello Anjolie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="./registrasi.html">Registrasi</a></li>
+      <li><a href="./kontak.html">Kontak</a></li>
+    </ul>
+    <h1>Formulir Registrasi Data Mahasiswa</h1>
+    <form onsubmit="return ValidateForm()">
+      <table cellspacing="4" cellpadding="4">
+        <tr>
+          <td><strong>Nama Mahasiswa</strong></td>
+          <td><input id="namamhs" type="text" name="namamhs" size="30" /></td>
+        </tr>
+        <tr>
+          <td><strong>Jenis Kelamin</strong></td>
+          <td>
+            <input id="laki" type="radio" name="jk" value="Laki-Laki" />
+            <label for="laki">Laki-Laki</label>
+            <input id="perempuan" type="radio" name="jk" value="Perempuan" />
+            <label for="perempuan">Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Program Studi</strong></td>
+          <td>
+            <select id="prodi" name="prodi">
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Teknik Industri">Teknik Industri</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Nomor Telepon</strong></td>
+          <td><input id="telepon" type="number" name="telepon" size="30" /></td>
+        </tr>
+        <tr>
+          <td><strong>Tanggal Lahir</strong></td>
+          <td><input id="nomhs" type="date" name="nomhs" size="30" /></td>
+        </tr>
+        <tr>
+          <td><strong>Email</strong></td>
+          <td><input id="email" type="email" name="email" size="30" /></td>
+        </tr>
+        <tr>
+          <td><strong>Password</strong></td>
+          <td>
+            <input id="password" type="password" name="password" size="30" autocomplete="off" />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p><strong>Hal Favorit</strong></p>
+          </td>
+          <td>
+            <fieldset>
+              <legend><strong>Game</strong></legend>
+              <input id="pubgMobile" type="checkbox" name="game" value="PUBG Mobile" />
+              <label for="pubgMobile">PUBG Mobile</label>
+              <input id="mobileLegends" type="checkbox" name="game" value="Mobile Legends" />
+              <label for="mobileLegends">Mobile Legend</label>
+            </fieldset>
+            <fieldset>
+              <legend><strong>Film</strong></legend>
+              <input id="drama" type="checkbox" name="film" value="Drama" />
+              <label for="drama">Drama</label>
+              <br />
+              <input id="action" type="checkbox" name="film" value="Action" />
+              <label for="action">Action</label>
+              <br />
+              <input id="romance" type="checkbox" name="film" value="Romance" />
+              <label for="romance">Romance</label>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>Deskripsi</strong></td>
+          <td><textarea id="deskripsi" name="deskripsi" cols="10" rows="20"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input id="simpan" type="submit" name="simpan" /></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      const ValidateForm = () => alert("Data Berhasil Disimpan!");
+    </script>
+  </body>
+</html>

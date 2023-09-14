@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>210711385 - Benidiktus Violaz Morello Anjolie</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      button {
+        cursor: pointer;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 16px;
+      }
+      .container {
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: aqua;
+        padding: 20px;
+        width: 400px;
+      }
+      .container p {
+        color: #333;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modul 2 - HTML, CSS & JavaScript</h1>
+    <div class="container">
+      <input id="nilai" type="text" value="100" hidden />
+      <p id="nama"></p>
+      <p id="umur"></p>
+      <p id="gender"></p>
+      <p id="nilaiSaya"></p>
+      <button onclick="onAlert()">Tombol Alert</button>
+    </div>
+    <script>
+      const onAlert = () => alert("Ini Tombol Alert!");
+      const reloadPage = () => location.reload();
+
+      const nama = prompt("Masukkan Nama Anda");
+      const umur = prompt("Masukkan Umur Anda Saat Ini");
+      let gender = prompt("Masukkan Jenis Kelamin Anda (L/P)");
+
+      switch (gender) {
+        case "L":
+          gender = "Laki-Laki";
+          break;
+        case "P":
+          gender = "Perempuan";
+          break;
+        default:
+          gender = "Tidak Diketahui";
+          break;
+      }
+
+      const konfirmasi = confirm("Apakah Anda Yakin Data Anda Sudah Benar?");
+      if (konfirmasi) {
+        const nilai = document.getElementById("nilai").value;
+
+        document.getElementById("nama").innerHTML = `Nama Saya: ${nama}`;
+        document.getElementById("umur").innerHTML = `Umur Saya: ${umur}`;
+        document.getElementById("gender").innerHTML = `Jenis Kelamin Saya: ${gender}`;
+        document.getElementById("nilaiSaya").innerHTML = `Saya Mendapat Nilai: ${nilai}`;
+      } else reloadPage();
+    </script>
+  </body>
+</html>

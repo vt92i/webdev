@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: bisque;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  background-color: #333;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.contact-list {
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px;
+  max-width: 600px;
+}
+
+.contact {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.contact p {
+  margin: 0;
+  color: #666;
+}

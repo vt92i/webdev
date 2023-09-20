@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - 210711385</title>
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.nicepng.com/png/detail/141-1415492_bootstrap-bootstrap-4-icon-png.png"
+            alt="Bootstrap"
+            width="40"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./login.html">Halaman Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./register.html">Halaman Register</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container-fluid bg-warning min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="bg-white rounded-4 p-5">
+        <h1 class="text-center text-warning fw-bold">LOGIN</h1>
+        <form name="login" onsubmit="return validateForm();">
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="inputEmail">Email</label>
+            <input class="form-control" id="inputEmail" type="text" placeholder="Masukkan Email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="inputPassword">Password</label>
+            <input
+              class="form-control"
+              id="inputPassword"
+              type="password"
+              placeholder="Masukkan Password"
+            />
+          </div>
+          <div class="mb-3 d-flex justify-content-between">
+            <div class="form-check">
+              <input class="form-check-input" id="inputRememberMe" type="checkbox" />
+              <label class="form-check-label" for="inputRememberMe">Remember Me</label>
+            </div>
+            <a
+              class="text-warning"
+              href="javascript:void(0)"
+              onclick="return handleForgotPassword();"
+              >Forgot Password</a
+            >
+          </div>
+          <input class="btn btn-warning w-100 text-white" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const handleForgotPassword = () => {
+        alert("Email: 210711385@students.uajy.ac.id");
+        alert("Password: 210711385");
+        return;
+      };
+      const validateForm = () => {
+        const email = document.forms["login"]["inputEmail"].value;
+        const password = document.forms["login"]["inputPassword"].value;
+        if (email.length == 0 || password.length == 0)
+          return alert("Email dan Password tidak boleh kosong!");
+        if (email !== "210711385@students.uajy.ac.id") return alert("Email tidak terdaftar!");
+        else if (password !== "210711385") return alert("Password salah!");
+        else return alert("Login berhasil!");
+      };
+    </script>
+  </body>
+</html>

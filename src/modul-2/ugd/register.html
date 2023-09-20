@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - 210711385</title>
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.nicepng.com/png/detail/141-1415492_bootstrap-bootstrap-4-icon-png.png"
+            alt="Bootstrap"
+            width="40"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./login.html">Halaman Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./register.html"
+                >Halaman Register</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container-fluid bg-warning min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="bg-white rounded-4 p-5">
+        <h1 class="text-center fw-bold">Formulir Registrasi Data Mahasiswa</h1>
+        <form
+          method="post"
+          name="register"
+          onsubmit="return validateForm();"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-3 row">
+            <div class="col">
+              <label class="form-label fw-bold" for="inputNama">Nama Mahasiswa</label>
+              <input
+                class="form-control"
+                id="inputNama"
+                name="inputNama"
+                type="text"
+                placeholder="Masukkan Nama"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label fw-bold" for="inputNIM">Nomor Induk Mahasiswa</label>
+              <input
+                class="form-control"
+                id="inputNIM"
+                name="inputNIM"
+                type="text"
+                placeholder="Masukkan NIM"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label fw-bold" for="inputTanggalLahir">Tanggal Lahir</label>
+              <input
+                class="form-control"
+                id="inputTanggalLahir"
+                name="inputTanggalLahir"
+                type="date"
+                name="inputTanggalLahir"
+              />
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-4">
+              <label class="form-label fw-bold" for="inputNomorTelepon">Nomor Telepon</label>
+              <input
+                class="form-control"
+                id="inputNomorTelepon"
+                name="inputNomorTelepon"
+                type="text"
+                placeholder="Masukkan Nomor Telepon"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label fw-bold" for="inputProgramStudi">Program Studi</label>
+              <select class="form-select" id="inputProgramStudi" name="inputProgramStudi">
+                <option value="-1" disabled selected>Pilih Program Studi</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Industri">Teknik Industri</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-3">
+              <label class="form-label fw-bold" for="inputEmail">Email</label>
+              <input
+                class="form-control"
+                id="inputEmail"
+                name="inputEmail"
+                type="text"
+                placeholder="Masukkan Email"
+              />
+            </div>
+            <div class="col-3">
+              <label class="form-label fw-bold" for="inputPassword">Password</label>
+              <input
+                class="form-control"
+                id="inputPassword"
+                name="inputPassword"
+                type="text"
+                placeholder="Masukkan Password"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label fw-bold" for="inputFoto">Photo</label>
+              <input class="form-control" id="inputFoto" type="file" name="inputFoto" />
+            </div>
+          </div>
+          <div class="mb-3 d-flex gap-4">
+            <label class="form-label fw-bold">Jenis Kelamin</label>
+            <div class="form-check">
+              <label class="form-check-label" for="L">Laki-laki</label>
+              <input
+                class="form-check-input"
+                id="L"
+                value="L"
+                type="radio"
+                name="inputJenisKelamin"
+              />
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="P">Perempuan</label>
+              <input
+                class="form-check-input"
+                id="P"
+                value="P"
+                type="radio"
+                name="inputJenisKelamin"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Hal Favorit</label>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                id="inputSwitchBermainGame"
+                name="inputSwitchBermainGame"
+                type="checkbox"
+                role="switch"
+              />
+              <label class="form-check-label" for="inputSwitchBermainGame">Bermain Game</label>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                id="inputSwitchMenontonFilm"
+                name="inputSwitchMenontonFilm"
+                type="checkbox"
+                role="switch"
+              />
+              <label class="form-check-label" for="inputSwitchMenontonFilm">Menonton Film</label>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                id="inputSwitchOlahraga"
+                name="inputSwitchOlahraga"
+                type="checkbox"
+                role="switch"
+              />
+              <label class="form-check-label" for="inputSwitchOlahraga">Olahraga</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="inputDeskripsi">Deskripsi</label>
+            <textarea
+              class="form-control"
+              id="inputDeskripsi"
+              placeholder="Deskripsikan Diri Anda..."
+              style="height: 100px"
+            ></textarea>
+          </div>
+          <div class="d-flex gap-2 justify-content-end">
+            <input class="btn btn-danger" type="reset" value="Reset" />
+            <input class="btn btn-warning" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const validateForm = () => {
+        const inputNama = document.forms["register"]["inputNama"].value;
+        const inputNIM = document.forms["register"]["inputNIM"].value;
+        const inputTanggalLahir = document.forms["register"]["inputTanggalLahir"].value;
+        const inputNomorTelepon = document.forms["register"]["inputNomorTelepon"].value;
+        const inputProgramStudi = document.forms["register"]["inputProgramStudi"].value;
+        const inputEmail = document.forms["register"]["inputEmail"].value;
+        const inputPassword = document.forms["register"]["inputPassword"].value;
+        const inputFoto = document.forms["register"]["inputFoto"].value;
+        const inputJenisKelamin = document.forms["register"]["inputJenisKelamin"].value;
+        const inputHalFavorit = [
+          document.forms["register"]["inputSwitchBermainGame"].checked,
+          document.forms["register"]["inputSwitchMenontonFilm"].checked,
+          document.forms["register"]["inputSwitchOlahraga"].checked,
+        ];
+        const inputDeskripsi = document.forms["register"]["inputDeskripsi"].value;
+
+        if (inputNama.length < 1) return alert("Nama Mahasiswa tidak boleh kosong!");
+        if (inputNIM.length < 1) return alert("Nomor Induk Mahasiswa tidak boleh kosong!");
+        if (inputTanggalLahir.length < 1) return alert("Tanggal Lahir tidak boleh kosong!");
+        if (inputNomorTelepon.length < 1) return alert("Nomor Telepon tidak boleh kosong!");
+        if (inputProgramStudi == -1) return alert("Pilih Program Studi Anda!");
+        if (inputEmail.length < 1) return alert("Email tidak boleh kosong!");
+        if (inputPassword.length < 1) return alert("Password tidak boleh kosong!");
+        if (inputFoto.length < 1) return alert("Silahkan input Foto!");
+        if (inputJenisKelamin.length < 1) return alert("Pilih Jenis Kelamin Anda!");
+        if (inputHalFavorit.every((item) => item == false)) return alert("Pilih Hal Favorit Anda!");
+        if (inputDeskripsi.length < 1) return alert("Deskripsi tidak boleh kosong!");
+
+        if (confirm("Apakah Data Anda Sudah Benar?")) return alert("Data Berhasil Disimpan!");
+        else return alert("Data Gagal Disimpan!");
+      };
+    </script>
+  </body>
+</html>

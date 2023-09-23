@@ -1,3 +1,6 @@
 [submodule "src/modul-3/gd/PW3_D_11385"]
 	path = src/modul-3/gd/PW3_D_11385
 	url = https://github.com/vt92i/PW3_D_11385.git
+[submodule "src/modul-4/gd/GDWeb4_D_11385"]
+	path = src/modul-4/gd/GDWeb4_D_11385
+	url = https://github.com/vt92i/GDWeb4_D_11385.git

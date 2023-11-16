@@ -16,3 +16,9 @@
 [submodule "src/modul-8/gd/GD8_D_11385"]
 	path = src/modul-8/gd/GD8_D_11385
 	url = https://github.com/vt92i/GD8_D_11385.git
+[submodule "src/modul-9/gd/PW9_D_11385"]
+	path = src/modul-9/gd/PW9_D_11385
+	url = https://github.com/vt92i/PW9_D_11385.git
+[submodule "src/modul-10/gd/API_D_11385"]
+	path = src/modul-10/gd/API_D_11385
+	url = https://github.com/vt92i/API_D_11385.git
